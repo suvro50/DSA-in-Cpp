@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(){
-     // VVI    T.C= O(log(n))
 
    // map ( key, value)  , map input sintax
    // Exp: m[key]=value
@@ -32,17 +31,12 @@ int main(){
         cout<<p.first<<" "<<p.second<<endl;
     }
 
+    // find function ..
 
-    // mp.count("Laptop")=1 , it count the number of occarence..
-    //mp["Laptop"]=100 ,it print Laptop value
-
-    cout<<"Count: "<<mp.count("Laptop")<<endl;
-    cout<<"Laptop value: "<<mp["Laptop"]<<endl;
-
-    mp.erase("Tv"); // it erase the value
-    cout<<"After erase: "<<endl;
-    for(auto p:mp) {
-        cout<<p.first<<" "<<p.second<<endl;
+    if(mp.find("Tv")!=mp.end()){
+        cout<<"found"<<endl;
+    }else{
+        cout<<"Not found"<<endl;
     }
 
 }
