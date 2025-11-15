@@ -44,5 +44,9 @@ int main(){
     //v.clear(); // clear all vector , except capacity.
 
 
+    //Also have this operations
+    // emplace_front , emplace_back
+    // size , erase, clear, begin, end,rbegin, rend, insert, fornt, back
+
     return 0;
 }
