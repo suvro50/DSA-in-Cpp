@@ -27,7 +27,7 @@ struct edge2{
 
 void unweighted_graph(vector<edge> graph[]){
 
-    graph[0].push_back(edge(0,2));
+    graph[0].push_back(edge(0,2));   // starting and ending edge
 
     graph[1].push_back(edge(1,2));
     graph[1].push_back(edge(1,3));
