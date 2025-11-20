@@ -2,6 +2,8 @@
 #include<unordered_map>
 using namespace std;
 
+//  Hash Table / HashMap / Unordered Map   , All are same
+
 int main(){
 
     // VVI    T.C= O(1)
@@ -18,6 +20,7 @@ int main(){
      for(auto p:mp){
         cout<<p.first<<" "<<p.second<<endl;
     }
+    cout<<endl<<mp["Laptop"]<<endl;
 
     return 0;
 }

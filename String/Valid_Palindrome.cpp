@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(){
-    string std="0olo0";
+    string std="olo";
     
     // For Alphanumeric : (A–Z, a–z) + Numbers (0–9)
    // isalnew()-> check Alphanumeric or not .
