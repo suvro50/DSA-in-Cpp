@@ -28,7 +28,7 @@ int main(){
 
     int arr[]={1,2,3,4,5,6};
     int n = sizeof(arr) / sizeof(arr[0]);
-    int target=15;
+    int target=7;
 
     pair<int,int> result=Two_sum(arr,n,target);
 
