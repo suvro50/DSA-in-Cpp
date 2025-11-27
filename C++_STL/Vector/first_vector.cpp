@@ -5,7 +5,7 @@ using namespace std;
 // Vector Dynamic Allocate Memory , Means run time allocate memory...
 int main(){
 
-    vector<int> vc(4,2);
+    //vector<int> vc(4,2);
 
     vector<int> vc;
 

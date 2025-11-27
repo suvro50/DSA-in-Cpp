@@ -21,7 +21,7 @@ template<typename x,typename y>
 
 class A{    // Multi template class
     public:
-    auto print(x a, y b){
+    auto print(x a, y b){  // auto key word auto detect return type
         return (a>b)? a : b;
     }
 };
