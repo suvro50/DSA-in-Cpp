@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// Print the array element
 void printArray(int arr[], int n, int index = 0) {
   
     if (index == n){

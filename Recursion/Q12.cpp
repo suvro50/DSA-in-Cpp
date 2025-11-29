@@ -1,6 +1,8 @@
 #include<iostream>
 using namespace std;
 
+// Check whether the given string is palindrome or not
+
 bool ispalindrome(string str, int start , int end){
     if(start>=end){
         return true;

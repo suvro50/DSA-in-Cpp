@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+// Calculate the factorial of n
 int Factorial(int n){
     if(n==0 || n==1) return 1;
 

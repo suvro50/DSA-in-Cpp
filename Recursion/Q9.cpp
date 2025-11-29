@@ -1,5 +1,7 @@
 #include<iostream>
 using namespace std;
+
+// Find the largest element of given array
 int largest_element(int arr[], int n, int index=0){
 
     if(index == n-1){

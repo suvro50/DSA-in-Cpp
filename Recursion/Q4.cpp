@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// Calculate the sum of digit of given number 
 int sumOfDigits(int n) {
     if (n == 0) return 0;
     int lastdigit=n%10;

@@ -117,36 +117,68 @@ class student{
 int main(){
 
     vector<student> s;
+
+    int n;
+    do{
+        cout<<"1.Add student"<<endl;
+        cout<<"2.Sort student by cgpa"<<endl;
+        cout<<"3.Search student by thair id"<<endl;
+        cout<<"4.Delete student by thair id"<<endl;
+        cout<<"5.Update student cgpa"<<endl;
+        cout<<"6.Show student info"<<endl;
+        cout<<"7.Exit"<<endl;
+
+        cout<<"Enter any option: ";
+        cin>>n;
+
+        switch(n){
+            case 1:Add_student(s); break;
+            case 2:sort(s.begin(),s.end(),sort_cgpa); break;
+            case 3:search_by_id(s); break;
+            case 4:delete_student_by_id(s); break;
+            case 5:Update_student_CGPA_by_ID(s); break;
+            case 6:{
+                 int c=1;
+               for(auto i:s){
+                cout<<endl;
+                cout<<"Student info "<<c++<<": "<<endl;
+                i.print();
+               } 
+               break;
+            }
+            case 7:"Exiting.."; break;
+        }
+    }while(n!=7);
     
-    Add_student(s);
-    sort(s.begin(),s.end(),sort_cgpa);
+    // Add_student(s);
+    // sort(s.begin(),s.end(),sort_cgpa);
 
-    int c=1;
-    for(auto i:s){
-        cout<<endl;
-        cout<<"Student info "<<c++<<": "<<endl;
-        i.print();
-    }
+    // int c=1;
+    // for(auto i:s){
+    //     cout<<endl;
+    //     cout<<"Student info "<<c++<<": "<<endl;
+    //     i.print();
+    // }
 
-    search_by_id(s);
-    delete_student_by_id(s);
+    // search_by_id(s);
+    // delete_student_by_id(s);
 
-    c=1;
+    // c=1;  // reset count
 
-    cout<<"After delete: "<<endl;
-    for(auto i:s){
-        cout<<endl;
-        cout<<"Student info "<<c++<<": "<<endl;
-        i.print();
-    }
-    Update_student_CGPA_by_ID(s);
-     c=1;
-    cout<<"After update cgpa: "<<endl;
-    for(auto i:s){
-        cout<<endl;
-        cout<<"Student info "<<c++<<": "<<endl;
-        i.print();
-    }
+    // cout<<"After delete: "<<endl;
+    // for(auto i:s){
+    //     cout<<endl;
+    //     cout<<"Student info "<<c++<<": "<<endl;
+    //     i.print();
+    // }
+    // Update_student_CGPA_by_ID(s);
+    //  c=1;  // reset count
+    // cout<<"After update cgpa: "<<endl;
+    // for(auto i:s){
+    //     cout<<endl;
+    //     cout<<"Student info "<<c++<<": "<<endl;
+    //     i.print();
+    // }
 
     return 0;
 }
