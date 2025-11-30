@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 void swapd(int &a,int &b){
-    int temp=a;
-    a=b;
-    b=temp;
+    int temp = a;
+    a = b;
+    b = temp;
 }
 
 void selection_sort(int arr[],int n){

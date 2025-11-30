@@ -3,12 +3,23 @@
 using namespace std;
 
 
+
+// Merge sort is a : Deivde and conquere algorithm
+
+// Best Case: O(n log n)
+
+// Average Case: O(n log n)
+
+// Worst Case: O(n log n)
+
+// Space Complexity: O(n)
+
 void merge_Two_part(vector<int> &arr,int start,int mid,int end){
 
     vector<int> temp;
 
-    int i=start;
-    int j=mid+1;
+    int i=start; // i run till mid from start 
+    int j=mid+1; // j run till end form mid+1
 
     while(i<=mid && j<=end){
         if(arr[i]<=arr[j]){
@@ -20,12 +31,12 @@ void merge_Two_part(vector<int> &arr,int start,int mid,int end){
         }
     }
 
-    while(i<=mid){
+    while(i<=mid){  // if element of i not finish
         temp.push_back(arr[i]);
         i++;
     }
 
-     while(j<=end){
+     while(j<=end){  // if element of j not finish
         temp.push_back(arr[j]);
         j++;
     }
@@ -35,9 +46,14 @@ void merge_Two_part(vector<int> &arr,int start,int mid,int end){
         arr[i+start]=temp[i];
     }
 
+   // temp is temporary storage for merging.
+
+  // arr[i + start] = temp[i] ensures that the sorted subarray goes back into its original position in the main array.
+
 }
 
 
+// This function sort the array
 void mergeSort(vector<int> &arr,int start,int end){
     if(start<end){
 

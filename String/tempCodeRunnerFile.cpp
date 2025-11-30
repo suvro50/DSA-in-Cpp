@@ -1,1 +1,2 @@
-ello w
+
+    cout<<c;
