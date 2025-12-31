@@ -8,7 +8,6 @@ struct mypair{
 
 };
 
-
 mypair findMax(int arr[], int start, int end){
 
     mypair p;
@@ -18,7 +17,7 @@ mypair findMax(int arr[], int start, int end){
 
     }else if (start==end-1){
 
-        if(arr[start]>arr[end]){
+        if(arr[start]>arr[end]){ // when only 2 element avalable
 
             p.mymax=arr[start];
             p.mymin=arr[end];
@@ -26,12 +25,13 @@ mypair findMax(int arr[], int start, int end){
             p.mymax=arr[end];
             p.mymin=arr[start];
         }
+
     }else{
         int mid=start+(end-start)/2;
 
-        mypair l=findMax(arr,start,mid); //T(n/2)
+        mypair l=findMax(arr,start,mid);  //T(n/2)
 
-        mypair r=findMax(arr,mid+1,end); //T(n/2)
+        mypair r=findMax(arr,mid+1,end);  //T(n/2)
 
         p.mymax= max(l.mymax , r.mymax);
         p.mymin= min(l.mymin , r.mymin);

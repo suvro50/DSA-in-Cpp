@@ -33,7 +33,7 @@ Node* tail=nullptr;
         }
     }
 
-  Node* reverse_list(Node* head){
+    Node* reverse_list(Node* head){
     Node* curr=head;
     Node* prev=nullptr;
     

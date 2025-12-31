@@ -11,7 +11,7 @@ struct Node{
      }
 };
 
-struct List{
+ struct List{
     Node* head;
     Node* tail;
 

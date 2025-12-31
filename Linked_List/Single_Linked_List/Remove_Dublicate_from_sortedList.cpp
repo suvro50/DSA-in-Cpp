@@ -42,7 +42,6 @@ Node* Remove_dublicate(Node* head){
         }
     }
     return head;
-
 }
 
 void print(Node* head){

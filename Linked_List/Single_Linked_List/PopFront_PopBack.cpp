@@ -16,6 +16,7 @@ struct Node{
 
 
     void push_front(int val){   // pust new element in first 
+        
         Node* newnode=new Node(val);
 
         if(head==nullptr){
@@ -65,10 +66,12 @@ struct Node{
 
 
         void pop_back(){   // pop_front means delete last element in Linked list..
+
         if(head==nullptr){
         cout<<"No data found";
         return;
         }
+
         if(head==tail){  //only one node
         delete head;
         head=tail=nullptr;
@@ -76,10 +79,11 @@ struct Node{
 
         }
 
+
         Node* temp=head;
 
         while(temp->next->next!=nullptr){   //Last node , previout node store tail
-        temp=temp->next;
+          temp=temp->next;
         }
 
         delete temp->next;

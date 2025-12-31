@@ -5,8 +5,11 @@ using namespace std;
 int findMax(int arr[], int start, int end){
     if (start==end){
         return arr[start];
-    }else if (start==end-1){
-        return (arr[start]>arr[end])? arr[start]:arr[end];
+
+    }else if (start==end-1){ // when only 2 element avalable
+
+        return (arr[start] > arr[end])? arr[start] : arr[end];
+
     }else{
         int mid=start+(end-start)/2;
 
@@ -14,7 +17,7 @@ int findMax(int arr[], int start, int end){
 
         int right_max=findMax(arr,mid+1,end); //T(n/2)
 
-        return (left_max > right_max)? left_max:right_max;
+        return (left_max > right_max)? left_max : right_max;
 
     }
 }
