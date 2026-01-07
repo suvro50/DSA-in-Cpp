@@ -52,9 +52,9 @@ void fractional_Knapsack(vector<Item>& v, int capacity){
             int remain=capacity - currentWeight;
 
           
-            double currect_per_kg_value= (double)v[i].value / (double)v[i].weight;
+            double per_kg_value= (double)v[i].value / (double)v[i].weight;
 
-            double fraction =remain*currect_per_kg_value;
+            double fraction =remain*per_kg_value;
             totalValue+=fraction;
             Item partialItem=v[i];
 

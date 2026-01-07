@@ -46,7 +46,6 @@ int maxSubArray(int arr[],int l,int r){
 }
 
 
-
 int main(){
     int arr[]={-3,1,3,4,5,2};
 

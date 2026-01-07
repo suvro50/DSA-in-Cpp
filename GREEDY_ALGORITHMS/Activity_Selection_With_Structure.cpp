@@ -37,12 +37,12 @@ void maximum_possible_meeting(vector<Meeting>& v) {
     vector<Meeting> selected;
 
     selected.push_back(v[0]);  //Add first meeting
-    int count = 1;
+    int count = 1;  //Already exist one metting
     int first_end_time = v[0].end;
 
     for(int i=1;i<v.size();i++){
 
-        if(v[i].start>=first_end_time){
+        if(v[i].start >= first_end_time){
             selected.push_back(v[i]);
             count++;
             first_end_time=v[i].end;
@@ -53,7 +53,9 @@ void maximum_possible_meeting(vector<Meeting>& v) {
     for(auto i:selected){
         i.print();
     }
+    
 
+  
 }
 
 int main(){

@@ -21,7 +21,7 @@ int majorityElement(vector<int>& a, int l, int r) {
 }
 
 int main() {
-    vector<int> a = {1,1,1,1,1,2,2,2,2};
+    vector<int> a = {1,1,1,1,1,2,2,2,9,9,9,7,8,3,3};
 
     int ans = majorityElement(a, 0, a.size() - 1);
     cout << "Majority element: " << ans << endl;

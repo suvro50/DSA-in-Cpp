@@ -13,7 +13,7 @@ int count_even(int arr[],int start,int end){
 
     }
    
-        int mid=(start +end )/2;
+        int mid=start+ (end-start)/2;
 
         int left=count_even(arr,start,mid);
         int right=count_even(arr,mid+1,end);
