@@ -17,7 +17,7 @@ bool cmp(job& a , job& b){
 
 // Function to find the maximum profit and the number of jobs done
 
-vector<int> jobsequence(vector<job>& jobs ,int n){
+vector<int> jobsequence(vector<job>& jobs , int n){
 
    
 
@@ -66,6 +66,7 @@ int main(){
     vector<job> jb(n);
 
     cin.ignore();
+
     for(int i=0;i<n;i++){
         cout<<"Enter details for job no "<<i+1<<": "<<endl;
 
