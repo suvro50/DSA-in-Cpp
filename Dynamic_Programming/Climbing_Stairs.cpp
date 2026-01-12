@@ -2,6 +2,7 @@
 #include <vector>
 using namespace std;
 
+//This implementation is Tabulation
 int climbStairs(int n) {
     if (n == 1) return 1;
 
