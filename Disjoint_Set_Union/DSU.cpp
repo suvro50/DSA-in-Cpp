@@ -13,11 +13,11 @@ void makeset(vector<int>& parent, vector<int>& rank, int n) {
 
 int findparent(vector<int>& parent, int node){  // find parent
 
-    if(parent[node] == node){  // means own parent own  ,, when it reached to its own parent , than return
-        return node;
+    if(parent[node] != node){  // means own parent own  , when it reached to its own parent , than return
+        parent[node]=findparent(parent , parent[node]);
     }
 
-    return parent[node]=findparent(parent , parent[node]);   // path compression
+    return parent[node];   // path compression
      
 }
 
@@ -35,7 +35,8 @@ void union_set(vector<int>& parent ,vector<int>& rank, int x , int y){
     }else if (rank[y] > rank[x]){
         parent[x]=y;
     }else{
-        parent[x]=y;
+        // Make parent anyone
+        parent[x]=y;  
         rank[y]++;
     }
 }
