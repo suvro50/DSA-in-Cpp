@@ -3,17 +3,17 @@ using namespace std;
 
 int primMST(int V, vector<vector<pair<int,int>>>& adj) {
 
-    // Min-heap: {weight, node}
     priority_queue< pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>> > pq;
     vector<bool> visited(V,false);
-
-    pq.push({0,0}); // {weight, start_node}
+    
+    pq.push({0,0}); // {weight,node}
     int sum = 0;
 
     while(!pq.empty()){
-        // Extract top
-        auto [weight, node] = pq.top(); // structured binding
+        auto top = pq.top();
         pq.pop();
+        int node = top.second;
+        int weight = top.first;
 
         if(visited[node]) continue;
         visited[node] = true;
@@ -23,7 +23,7 @@ int primMST(int V, vector<vector<pair<int,int>>>& adj) {
             int adjnode = it.first;
             int wt = it.second;
             if(!visited[adjnode]){
-                pq.push({wt, adjnode}); // {weight, node}
+                pq.push({wt, adjnode});
             }
         }
     }
@@ -37,19 +37,19 @@ int main() {
 
     vector<vector<int>> edges(E, vector<int>(3));
 
-    cout << "Enter edges (start_vertex, end_vertex, weight):\n";
+     cout << "Enter edges (start_vertex, end_vertex, weight):\n";
     for(int i = 0; i < E; i++){
         cin >> edges[i][0] >> edges[i][1] >> edges[i][2];
     }
 
-    // Build adjacency list
+    // Build adjacency list here in main
     vector<vector<pair<int,int>>> adj(V);
     for(auto &e : edges){
         int u = e[0];
         int v = e[1];
         int w = e[2];
         adj[u].push_back({v, w});
-        adj[v].push_back({u, w}); // undirected
+        adj[v].push_back({u, w}); // undirected graph
     }
 
     int mstCost = primMST(V, adj);
@@ -57,7 +57,6 @@ int main() {
 
     return 0;
 }
-
 
 // input: 
 // 4 4
