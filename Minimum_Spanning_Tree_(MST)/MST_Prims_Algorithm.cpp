@@ -6,7 +6,6 @@
 using namespace std;
 
 // Prim's algorithm using adjacency matrix internally
-
 int MST_Prims(int v, vector< vector<int> >& graph){
     // {weight, node} for pair<int,int>
 
@@ -15,11 +14,12 @@ int MST_Prims(int v, vector< vector<int> >& graph){
     // Priority queue: {weight, {parent, current}}
     priority_queue< pair<int,pair<int,int> > , vector< pair< int,pair<int,int> > > ,greater< pair<int,pair<int,int> > >  > pq;
 
-    pq.push({0, { -1, 0 }}); // {weight, {parent, current node}}
+   pq.push({0, {-1, 0}});  // {weight, {parent, current node}}
 
     vector<bool> visited(v, false);
 
      int mstcost=0;
+
     while(!pq.empty()){
        auto top=pq.top();
        pq.pop();
@@ -54,7 +54,7 @@ int main(){
     cout << "Enter number of vertices and edges: ";
     cin >> V >> E;
 
-    vector<vector<int>> graph(V, vector<int>(V, 0));
+    vector<vector<int>> graph(V, vector<int>(V));
 
     cout << "Enter edges (start_vertex, end_vertex, weight):\n";
     for (int i = 0; i < E; i++) {

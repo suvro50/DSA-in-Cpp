@@ -15,7 +15,7 @@ void makeset(vector<int>& parent, vector<int>& rank ,int n){
         parent[i]=i;  // own parent own 
         rank[i]=0;  // first ranks 0 , all sets
     }
-}
+} 
 
 int findparent(vector<int>& parent, int node){  // find parent
 
@@ -83,7 +83,7 @@ int main() {
     cin >> n >> m;
 
     vector<vector<int>> edges;
-    cout << "Enter each edge as: start_node end_node weight" << endl;
+    cout << "Enter each edge as: start_node, end_node, weight" << endl;
 
     for(int i = 0; i < m; i++) {
         int u, v, wt;
@@ -97,3 +97,11 @@ int main() {
 
     return 0;
 }
+
+
+// input: 
+// 4 4
+// 0 1 2
+// 0 3 6
+// 1 2 3
+// 1 3 8
